@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
@@ -34,6 +35,7 @@ import { LoginPanelComponent } from './login-panel/login-panel.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: '', component: AosHomeComponent},
       {path: 'login', component: LoginPanelComponent},
